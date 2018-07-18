@@ -206,7 +206,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day8"><a href="#day8" class="headerlink" title="day8"></a>day8</h2>
+<h2 id="day8-python字符串操作"><a href="#day8-python字符串操作" class="headerlink" title="day8:python字符串操作"></a>day8:python字符串操作</h2><p>字符串函数<br>字符串大小写转换<br>    string string.capitalize()<br>    将字符串的第一个字母变成大写,其他字母变小写<br>    string str.title()<br>    所有单词都是以大写开始，其余字母均为小写<br>    string str.upper()<br>    将字符串中的小写字母转为大写字母<br>    string str.lower()<br>    字符串中所有大写字符为小写<br>    string str.swapcase()<br>    对字符串的大小写字母进行转换</p>
+<p>查找字符出现的位置<br>    string string.len()<br>    计算字符串长度<br>    string str.count()<br>    计算指定字符串出现的次数<br>    string str.find(str, beg=0, end=len(string))<br>    查找指定字符串第一次出现的位置，找不到返回-1<br>    string str.index(str, beg=0, end=len(string))<br>    跟find()方法一样，只不过如果str不在 string中会报一个异常（str找不到）<br>    Bool str.startswith(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串开头<br>    Bool str.endswith(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串结尾</p>
+<p>字符串内容检测<br>    bool str.isupper()<br>    检测字符串中所有的字母是否都为大写<br>    bool str.islower()<br>    检测字符串是否由小写字母组成<br>    bool str.isalnum()<br>    检测字符串是否由字母和数字组成，空字符串为false<br>    bool str.isalpha()<br>    检测字符串是否只由字母组成，带符号返回false<br>    bool str.isdigit()<br>    检测字符串是否只由数字组成（只识别十进制），空字符串为false<br>    bool isspace()<br>    检测字符串是否只由空格组成</p>
+<p>字符串的分隔（截取）<br>    string string.split()<br>    计算字符串长度<br>    string str.join()<br>    计算指定字符串出现的次数<br>    string str.zfill(str, beg=0, end=len(string))<br>    string str.center(str, beg=0, end=len(string))<br>    跟find()方法一样，只不过如果str不在 string中会报一个异常（str找不到）<br>    Bool str.ljust(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串开头<br>    Bool str.rjust(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串结尾</p>
+<p>字符串的替换<br>    第一步:使用maketrans()创建字符串映射的转换表<br>    str.maketrans(intab, outtab)<br>    第二步：使用translate() 方法根据参数table映射表转换字符串的字符<br>    注意：两个字符串的长度必须相同，为一一对应的关系</p>
+<p>字符串的映射<br>    maketrans()方法用来生成字符映射表，而translate()方法则按映射表中定义的对应关系转换并替换其中的字符，使用这两个方法的组合可以同时处理多个不同的字符，replace()方法则无法满足这一要求<br>    在Python中，字符串属于不可变对象，不支持原地修改，如果需要修改其中的值，只能重新创建一个新的字符串对象。然而，如果确实需要一个支持原地修改的unicode数据对象，可以使用io.StringIO对象或array模块</p>
+
       
 
       
@@ -254,7 +260,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day7"><a href="#day7" class="headerlink" title="day7"></a>day7</h2>
+<h2 id="day7-python字符串操作"><a href="#day7-python字符串操作" class="headerlink" title="day7:python字符串操作"></a>day7:python字符串操作</h2><p>字符串的定义：字符串是 Python 中最常用的数据类型。我们可以使用引号(‘或”)来创建字符串，创建字符串很简单，只要为变量分配一个值即可 </p>
+<p>字符串操作<br>Python中的字符串可以如下表示：<br>        单引号（’）：可以用单引号指示字符串，就如同’Quote me on this‘这样。所有的空白，即空格和制表符都照原样保留。<br>        双引号（“）：测试数据显示在双引号中的字符串与单引号中的字符串的使用完全相同，例如”What‘s your name?“。<br>        三引号（’’’)：不需要行属转义，它们已经包含在字符串中。<br>常用转义字符：<br>    \        反斜线<br>    \&amp;#39        单引号<br>    \&amp;quot        双引号<br>    \000    空<br>    \n        换行<br>    \r        回车<br>    \t        横向制表符<br>    \       (在行尾时)    续行符<br>字符串格式化:<br>    %c    格式化字符及其ASCII码<br>    %s    格式化字符串<br>    %d    格式化整数<br>    %u    格式化无符号整型<br>    %o    格式化无符号八进制数<br>    %x    格式化无符号十六进制数<br>    %X    格式化无符号十六进制数（大写）<br>    %f    格式化浮点数字，可指定小数点后的精度<br>    %e    用科学计数法格式化浮点数<br>    %E    作用同%e，用科学计数法格式化浮点数<br>    %g    %f和%e的简写<br>    %G    %f 和%E 的简写<br>    %p    用十六进制数格式化变量的地址<br>字符串运算符:</p>
+<ul>
+<li>字符串连接 </li>
+</ul>
+<ul>
+<li>重复输出字符串（复制）<br>[]        通过索引获取字符串中字符<br>[:]        截取字符串中的一部分(字符串取片操作)<br>in        成员运算符 - 如果字符串中包含给定的字符返回 True<br>not in  成员运算符 - 如果字符串中包含给定的字符返回 True<br>r/R        原始字符串除在字符串的第一个引号前加上字母”r”     （可以大小写）以外，与普通字符串有着几乎完全相同的语法。<br>%        格式字符串</li>
+</ul>
+
       
 
       
@@ -302,7 +316,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day6"><a href="#day6" class="headerlink" title="day6"></a>day6</h2>
+<h2 id="day6-python的高级特性"><a href="#day6-python的高级特性" class="headerlink" title="day6:python的高级特性"></a>day6:python的高级特性</h2><p>1.列表生成式<br>    列表生成式通常是结合range()函数一起使用的，所以在介绍列表生成式前，我们先介绍Python的内置函数range()的使用方法。<br>    Python 的内置函数range() 函数可创建一个整数序列，一般和 for 循环连用。<br>    list(range(1, 11))<br>2.切片<br>    Python提供切片（Slice）操作符来截取指定索引范围的序列（列表/元组），可以很方便地获取序列的子序列。<br>    L[a:b]表示从索引a开始取，直到索引b为止，但不包括索引b。<br>    取前3个元素，用一行代码就可以完成切片。<br>    从索引1开始，取出2个元素：<br>    支持倒数切片。L[-1]取倒数第一个元素<br>3.迭代器<br>    Python迭代器（Iterator）可以记住遍历的位置的对象，从第一个元素开始访问，然后依次访问直到所有的元素都被遍历。<br>    迭代器只能往前不会后退，有两个基本方法：iter()和next()。<br>    iter()用来创建迭代器，next()用来访问迭代器的下一个元素。<br>    字符串、列表或元组对象都能用来创建迭代器，同时也支持for循环遍历<br>4.生成器<br>    生成器（generator）：生成器是一次生成一个值的特殊类型函数<br>    当列表元素很多，而列表后续元素可以通过某种算法推导出来，我们就不用存储完整的列表，从而节省大量的空间。生成器可以利用for循环访问，也可以利用next()来一次访问元素。</p>
+
       
 
       
@@ -350,7 +365,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day5"><a href="#day5" class="headerlink" title="day5"></a>day5</h2>
+<h2 id="day5-python流程控制"><a href="#day5-python流程控制" class="headerlink" title="day5:python流程控制"></a>day5:python流程控制</h2><p>条件控制(分支控制)<br>    if语句<br>    if语句嵌套<br>循环控制<br>    while循环<br>    for循环<br>跳转语句<br>    break语句<br>    continue语句<br>    pass语句</p>
+
       
 
       
@@ -398,7 +414,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day4"><a href="#day4" class="headerlink" title="day4"></a>day4</h2>
+<h2 id="day4-python的运算和运算符"><a href="#day4-python的运算和运算符" class="headerlink" title="day4:python的运算和运算符"></a>day4:python的运算和运算符</h2><p>1.算术运算符 + - * / % ** //</p>
+<p>2.比较（关系）运算符 == ！= &amp;lt&amp;gt  &amp;lt &amp;gt &amp;lt=  &amp;gt=<br>3.赋值运算符 = += -= *= /= %= **= //=<br>4.逻辑运算符 and or not<br>5.位运算符 &amp; | ^ ~ &amp;lt&amp;lt &amp;gt&amp;gt<br>6.成员运算符 in  not in<br>7.身份运算符 is  not is<br>8.运算符优先级 理解</p>
+
       
 
       
@@ -446,7 +464,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h2>
+<h2 id="day3：python数据类型转换"><a href="#day3：python数据类型转换" class="headerlink" title="day3：python数据类型转换"></a>day3：python数据类型转换</h2><p>数据类型转换分为两种：自动转换和强制转换<br>自动转换<br>    自动转换不需要人工干预<br>    自动类型转换多发生在运算或者判断过程中<br>    转换时向着更加精确的类型转换<br>强制转换<br>    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。<br>例：int()、float()、str()等等。</p>
+<p>1.整形-自动转换<br> 布尔型True转换成数字1,False转换成数字0<br> 整型数据只有使用+ － * ** //运算符，并且不与浮点数进行运算，才能继续保持为整型数<br> 整形进行除法（/）运算，会自动转为浮点型</p>
+<p>整形-强制转换</p>
+<p>nt()函数可以将浮点数转换为整数，返回其整数部分，舍弃其小数部分。<br>整形字符串可以转换成整形，浮点数字符串不能转换成整形</p>
+<p>2.浮点型<br>    浮点型-强制转换<br>    round()函数可以将小数部分四舍五入。<br>    将浮点数转换为最近邻的整数<br>    （floor()：仅保留整数。ceil()：将小数部分一律向整数部分进位）<br>    浮点数的小数表示可以使用float.as_integer_ratio()方法获取，比如，给定浮点数x=0.25，则调用float.as_integer_ratio(x)将返回(1,4) 。<br>    使用float.hex()方法，可以将浮点数以十六进制形式表示为字符串，相反的转换可以使用float.fromhex()实现。<br>3.复数-complex<br>    将其他数据转换为复数<br>    整形转换之后变为（整数+0j）<br>    浮点型转换之后变成（浮点数+0j）<br>    布尔值转换之后 True-&gt;（1+0j）False-&gt;（0j）<br>    字符串，纯整型和浮点型都可以转换，其他不能转换<br>4.布尔值-强制<br>    整形 0<br>    浮点型 0.0<br>    复数 0+0j<br>    布尔值 false<br>    字符串 ‘’空字符串<br>    列表  []空列表<br>    元组  ()空元组<br>    字典  {}空字典<br>    集合  set()空集合<br>5.字符串型-自动<br>    如果字符串中包含.或e或E，则转换成浮点型；否则转换成整型<br>    其他类型只要加上单引号（’）、双引号（“）、三引号（’’’）就可以转换为字符串类型</p>
+<p>6.列表<br>    数字类型不能转；字典，集合，元组，字符串，这四个是可以来回进    行转换的<br>    字符串转换时每个字符变成列表中的一个值<br>    字典类型转换时，仅将字典的键部分转换为列表，忽略值<br>7.元组<br>    tuple（s）将序列 s 转换为一个元组<br>8.集合<br>    set（s）将s转为集合类型<br>9.字典<br>    dict（s）将s转为字典类型<br>    单独一个数据是不能转为字典类型的<br>    其他类型转为字典是需要按照指定的格式才可以转化</p>
+
       
 
       

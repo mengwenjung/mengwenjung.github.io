@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>github部署hexo博客|孟文俊github-hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day3">
+  <meta name="description" content="day3：python数据类型转换数据类型转换分为两种：自动转换和强制转换自动转换    自动转换不需要人工干预    自动类型转换多发生在运算或者判断过程中    转换时向着更加精确的类型转换强制转换    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。例：int()、float()、str()等等。 1.整形-自动转换 布尔型True转换成数字1,False转换成数字0 整型数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github部署hexo博客|孟文俊github-hexo">
 <meta property="og:url" content="http://yoursite.com/2018/07/18/day3/index.html">
 <meta property="og:site_name" content="github部署hexo博客|孟文俊github-hexo">
-<meta property="og:description" content="day3">
+<meta property="og:description" content="day3：python数据类型转换数据类型转换分为两种：自动转换和强制转换自动转换    自动转换不需要人工干预    自动类型转换多发生在运算或者判断过程中    转换时向着更加精确的类型转换强制转换    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。例：int()、float()、str()等等。 1.整形-自动转换 布尔型True转换成数字1,False转换成数字0 整型数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T09:07:16.425Z">
+<meta property="og:updated_time" content="2018-07-18T10:13:57.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github部署hexo博客|孟文俊github-hexo">
-<meta name="twitter:description" content="day3">
+<meta name="twitter:description" content="day3：python数据类型转换数据类型转换分为两种：自动转换和强制转换自动转换    自动转换不需要人工干预    自动类型转换多发生在运算或者判断过程中    转换时向着更加精确的类型转换强制转换    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。例：int()、float()、str()等等。 1.整形-自动转换 布尔型True转换成数字1,False转换成数字0 整型数">
   
     <link rel="alternative" href="/atom.xml" title="github部署hexo博客|孟文俊github-hexo" type="application/atom+xml">
   
@@ -160,7 +160,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h2>
+<h2 id="day3：python数据类型转换"><a href="#day3：python数据类型转换" class="headerlink" title="day3：python数据类型转换"></a>day3：python数据类型转换</h2><p>数据类型转换分为两种：自动转换和强制转换<br>自动转换<br>    自动转换不需要人工干预<br>    自动类型转换多发生在运算或者判断过程中<br>    转换时向着更加精确的类型转换<br>强制转换<br>    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。<br>例：int()、float()、str()等等。</p>
+<p>1.整形-自动转换<br> 布尔型True转换成数字1,False转换成数字0<br> 整型数据只有使用+ － * ** //运算符，并且不与浮点数进行运算，才能继续保持为整型数<br> 整形进行除法（/）运算，会自动转为浮点型</p>
+<p>整形-强制转换</p>
+<p>nt()函数可以将浮点数转换为整数，返回其整数部分，舍弃其小数部分。<br>整形字符串可以转换成整形，浮点数字符串不能转换成整形</p>
+<p>2.浮点型<br>    浮点型-强制转换<br>    round()函数可以将小数部分四舍五入。<br>    将浮点数转换为最近邻的整数<br>    （floor()：仅保留整数。ceil()：将小数部分一律向整数部分进位）<br>    浮点数的小数表示可以使用float.as_integer_ratio()方法获取，比如，给定浮点数x=0.25，则调用float.as_integer_ratio(x)将返回(1,4) 。<br>    使用float.hex()方法，可以将浮点数以十六进制形式表示为字符串，相反的转换可以使用float.fromhex()实现。<br>3.复数-complex<br>    将其他数据转换为复数<br>    整形转换之后变为（整数+0j）<br>    浮点型转换之后变成（浮点数+0j）<br>    布尔值转换之后 True-&gt;（1+0j）False-&gt;（0j）<br>    字符串，纯整型和浮点型都可以转换，其他不能转换<br>4.布尔值-强制<br>    整形 0<br>    浮点型 0.0<br>    复数 0+0j<br>    布尔值 false<br>    字符串 ‘’空字符串<br>    列表  []空列表<br>    元组  ()空元组<br>    字典  {}空字典<br>    集合  set()空集合<br>5.字符串型-自动<br>    如果字符串中包含.或e或E，则转换成浮点型；否则转换成整型<br>    其他类型只要加上单引号（’）、双引号（“）、三引号（’’’）就可以转换为字符串类型</p>
+<p>6.列表<br>    数字类型不能转；字典，集合，元组，字符串，这四个是可以来回进    行转换的<br>    字符串转换时每个字符变成列表中的一个值<br>    字典类型转换时，仅将字典的键部分转换为列表，忽略值<br>7.元组<br>    tuple（s）将序列 s 转换为一个元组<br>8.集合<br>    set（s）将s转为集合类型<br>9.字典<br>    dict（s）将s转为字典类型<br>    单独一个数据是不能转为字典类型的<br>    其他类型转为字典是需要按照指定的格式才可以转化</p>
+
       
 
       

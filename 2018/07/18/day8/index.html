@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>github部署hexo博客|孟文俊github-hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day8">
+  <meta name="description" content="day8:python字符串操作字符串函数字符串大小写转换    string string.capitalize()    将字符串的第一个字母变成大写,其他字母变小写    string str.title()    所有单词都是以大写开始，其余字母均为小写    string str.upper()    将字符串中的小写字母转为大写字母    string str.lower()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github部署hexo博客|孟文俊github-hexo">
 <meta property="og:url" content="http://yoursite.com/2018/07/18/day8/index.html">
 <meta property="og:site_name" content="github部署hexo博客|孟文俊github-hexo">
-<meta property="og:description" content="day8">
+<meta property="og:description" content="day8:python字符串操作字符串函数字符串大小写转换    string string.capitalize()    将字符串的第一个字母变成大写,其他字母变小写    string str.title()    所有单词都是以大写开始，其余字母均为小写    string str.upper()    将字符串中的小写字母转为大写字母    string str.lower()">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T09:07:16.441Z">
+<meta property="og:updated_time" content="2018-07-18T10:13:57.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github部署hexo博客|孟文俊github-hexo">
-<meta name="twitter:description" content="day8">
+<meta name="twitter:description" content="day8:python字符串操作字符串函数字符串大小写转换    string string.capitalize()    将字符串的第一个字母变成大写,其他字母变小写    string str.title()    所有单词都是以大写开始，其余字母均为小写    string str.upper()    将字符串中的小写字母转为大写字母    string str.lower()">
   
     <link rel="alternative" href="/atom.xml" title="github部署hexo博客|孟文俊github-hexo" type="application/atom+xml">
   
@@ -160,7 +160,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day8"><a href="#day8" class="headerlink" title="day8"></a>day8</h2>
+<h2 id="day8-python字符串操作"><a href="#day8-python字符串操作" class="headerlink" title="day8:python字符串操作"></a>day8:python字符串操作</h2><p>字符串函数<br>字符串大小写转换<br>    string string.capitalize()<br>    将字符串的第一个字母变成大写,其他字母变小写<br>    string str.title()<br>    所有单词都是以大写开始，其余字母均为小写<br>    string str.upper()<br>    将字符串中的小写字母转为大写字母<br>    string str.lower()<br>    字符串中所有大写字符为小写<br>    string str.swapcase()<br>    对字符串的大小写字母进行转换</p>
+<p>查找字符出现的位置<br>    string string.len()<br>    计算字符串长度<br>    string str.count()<br>    计算指定字符串出现的次数<br>    string str.find(str, beg=0, end=len(string))<br>    查找指定字符串第一次出现的位置，找不到返回-1<br>    string str.index(str, beg=0, end=len(string))<br>    跟find()方法一样，只不过如果str不在 string中会报一个异常（str找不到）<br>    Bool str.startswith(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串开头<br>    Bool str.endswith(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串结尾</p>
+<p>字符串内容检测<br>    bool str.isupper()<br>    检测字符串中所有的字母是否都为大写<br>    bool str.islower()<br>    检测字符串是否由小写字母组成<br>    bool str.isalnum()<br>    检测字符串是否由字母和数字组成，空字符串为false<br>    bool str.isalpha()<br>    检测字符串是否只由字母组成，带符号返回false<br>    bool str.isdigit()<br>    检测字符串是否只由数字组成（只识别十进制），空字符串为false<br>    bool isspace()<br>    检测字符串是否只由空格组成</p>
+<p>字符串的分隔（截取）<br>    string string.split()<br>    计算字符串长度<br>    string str.join()<br>    计算指定字符串出现的次数<br>    string str.zfill(str, beg=0, end=len(string))<br>    string str.center(str, beg=0, end=len(string))<br>    跟find()方法一样，只不过如果str不在 string中会报一个异常（str找不到）<br>    Bool str.ljust(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串开头<br>    Bool str.rjust(str, beg=0,end=len(string))<br>    检测字符串是否以指定的字符串结尾</p>
+<p>字符串的替换<br>    第一步:使用maketrans()创建字符串映射的转换表<br>    str.maketrans(intab, outtab)<br>    第二步：使用translate() 方法根据参数table映射表转换字符串的字符<br>    注意：两个字符串的长度必须相同，为一一对应的关系</p>
+<p>字符串的映射<br>    maketrans()方法用来生成字符映射表，而translate()方法则按映射表中定义的对应关系转换并替换其中的字符，使用这两个方法的组合可以同时处理多个不同的字符，replace()方法则无法满足这一要求<br>    在Python中，字符串属于不可变对象，不支持原地修改，如果需要修改其中的值，只能重新创建一个新的字符串对象。然而，如果确实需要一个支持原地修改的unicode数据对象，可以使用io.StringIO对象或array模块</p>
+
       
 
       
