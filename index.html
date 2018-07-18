@@ -152,6 +152,138 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>��������(��֧����)<br>if��</p>
+<p>#����֧———————————————–<br>llist1=[“С��”,100,50,[‘one’,’two’],33,45]<br>list2=[]<br>list3=[]<br>list4=[]<br>for i in list1:<br>    if isinstance(i,int):<br>        list2+=[i]<br>print(list2)<br>for j in list2:<br>    if j%2==1:<br>        list3+=[j]<br>    else:<br>        list4+=[j]<br>print(“������”,list3)<br>print(“ż��”,list4)</p>
+<p>#Ƕ�ף�————————————————<br>llist1=[“С��”,100,50,[‘one’,’two’],33,45]<br>list3=[]<br>list4=[]<br>for i in list1:<br>    if isinstance(i,int):<br>        if i%2==1:<br>            list3+=[i]<br>        else:<br>            list4+=[i]<br>print(“������”,list3)<br>print(“ż��”,list4)</p>
+<p>#���֦��————————————————<br>import datetime<br>weeks=datetime.datetime.now().weekday()<br>print(type(weeks))<br>if weeks==0:<br>    print(“����һ”)<br>elif weeks==1:<br>    print(“���ڶ�”)<br>elif weeks==2:<br>    print(“������”)<br>elif weeks==3:<br>    print(“������”)<br>elif weeks==4:<br>    print(“������”)<br>elif weeks==5:<br>    print(“������”)<br>else:<br>    print(“������”)</p>
+<p>#����ʯͷ��������——————————————–</p>
+<p>import random<br>print(‘’’1.ʯͷ<br>2.����<br>3.��<br>��������Ҫ������ţ�’’’)<br>l1=[[1,1],[2,2],[3,3]]<br>l2=[[1,2],[2,3],[3,1]]<br>u=int(input())<br>i=random.randint(1,3)<br>print(i)<br>if [u,i] in l1:<br>    print(‘ƽ��’)<br>elif [u,i] in l2:<br>    print(‘��Ӯ��’)<br>else:<br>    print(‘������’)<br>    print(‘ע�⣺�������߲���ϵͳҲĬ��Ϊ����’)</p>
+<p>ѭ������</p>
+<p>��ת���</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/18/day3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-day2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>��������ת����Ϊ���֣�<br>�Զ�ת����ǿ��ת��<br>�Զ�ת��<br>    �Զ�ת������Ҫ�˹���Ԥ<br>    �Զ�����ת���෢������������жϹ�����</p>
+<pre><code>ת��ʱ���Ÿ��Ӿ�ȷ������ת��
+</code></pre><p>ǿ��ת��</p>
+<p>���ݳ�����Ҫ���ɳ���Ա��Ϊ�ı��������͵ķ�ʽ�ͽ���ǿ��ת��������int()��float()��str()�ȵȡ�</p>
+<p>����ת��֮��Ϊ�����ͣ�����+.0</p>
+<p>����������Ҫת����ת��֮�󱣳�ԭ״</p>
+<p>����ֵת�� TrueתΪ1.0��FalseתΪ0.0    </p>
+<p>�ַ����д������͸������ַ�������ת������������ת��</p>
+<p>round()�������Խ�С�������������롣<br>��������С����ʾ����ʹ��float.as_integer_ratio()������ȡ�����磬����������x=0.25�������float.as_integer_ratio(x)������(1,4) ��<br>ʹ��float.hex()���������Խ���������ʮ��������ʽ��ʾΪ�ַ������෴��ת������ʹ��float.fromhex()ʵ�֡�</p>
+<p>����ֵ����ת�� True–&gt;1<br>                         False–&gt;0<br>ǿ��ת���ɲ������͵Ŀ�ΪFalse ����ΪTrue</p>
+<p>str(x)������ x ת��Ϊ�ַ���<br>repr(x)������ x ת��Ϊ����ʽ�ַ���(ԭ�����)<br>�Ӻ� (+) ���ַ��������ӷ��� �Ǻ� (*) ��ʾ���Ƶ�ǰ�ַ���������������Ϊ���ƵĴ���</p>
+<p>�ֵ�ǿ��ת����ֵΪ��</p>
+<hr>
+<p>**    ��-����x��y����<br>//    ������<br>/    �� ��ֵΪfloat��</p>
+<hr>
+<h2 id="��������c�"><a href="#��������c�" class="headerlink" title="��������ȼ�"></a>��������ȼ�</h2><p>�����    ����<br>**    ָ�� (������ȼ�)<br>~ + -    ��λ��ת, һԪ�Ӻźͼ��� (��������ķ�����Ϊ +@ �� -@)</p>
+<ul>
+<li>/ % //    �ˣ�����ȡģ��ȡ����</li>
+</ul>
+<ul>
+<li><ul>
+<li>�ӷ�����<blockquote>
+<blockquote>
+<p>&lt;&lt;    ���ƣ����������<br>&amp;    λ ‘AND’<br>^ |    λ�����<br>&lt;= &lt; &gt; &gt;=    �Ƚ������<br>&lt;&gt; == !=    ���������<br>= %= /= //= -= += *= **=    ��ֵ�����<br>is is not    ���������<br>in not in    ��Ա�����<br>not or and    �߼������</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/18/day2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
