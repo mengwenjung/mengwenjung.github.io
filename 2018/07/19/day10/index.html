@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>github部署hexo博客|孟文俊github-hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
+  <meta name="description" content="元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100, 200, 300 函数type(x) 用来返回x">
+<meta name="keywords" content="总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github部署hexo博客|孟文俊github-hexo">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/day10/index.html">
 <meta property="og:site_name" content="github部署hexo博客|孟文俊github-hexo">
-<meta property="og:description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
+<meta property="og:description" content="元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100, 200, 300 函数type(x) 用来返回x">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-19T07:03:24.327Z">
+<meta property="og:updated_time" content="2018-07-19T11:15:54.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github部署hexo博客|孟文俊github-hexo">
-<meta name="twitter:description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
+<meta name="twitter:description" content="元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100, 200, 300 函数type(x) 用来返回x">
   
     <link rel="alternative" href="/atom.xml" title="github部署hexo博客|孟文俊github-hexo" type="application/atom+xml">
   
@@ -159,8 +160,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="day10-python元组，字典和集合的相关操作"><a href="#day10-python元组，字典和集合的相关操作" class="headerlink" title="day10:python元组，字典和集合的相关操作"></a>day10:python元组，字典和集合的相关操作</h2><p>元组 tuple<br>  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器</p>
+        <p>元组 tuple<br>  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器</p>
 <p>元组的表示方法:<br>  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组</p>
 <p>创建空元组的字面值:<br>   t = ()   空元组</p>
 <p>创建非空元组的字面值表示:<br>  t = 200,<br>  t = (20,)<br>  t = (1, 2, 3)<br>  t = 100, 200, 300</p>
@@ -247,6 +247,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -332,6 +343,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#L-7-2-6-8-4-原来先后顺序的反向"><span class="toc-number">1.</span> <span class="toc-text">L = [7, 2, 6, 8, 4]  # 原来先后顺序的反向</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -458,6 +482,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
