@@ -158,10 +158,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day10-数学和列表相关操作"><a href="#day10-数学和列表相关操作" class="headerlink" title="day10:数学和列表相关操作"></a>day10:数学和列表相关操作</h2><p>列表简单操作<br>    创建列表<br>    空列表<br>    创建具有一个数据的列表<br>    创建具有多个数据的列表<br>    列表的操作<br>    访问<br>    添加<br>    修改<br>    删除</p>
-<p>list.append(obj)        在列表末尾添加新的对象<br>list.insert(index, obj)    将对象插入列表<br>list.clear()            清空列表<br>list.copy()                复制列表<br>list.count(obj)            统计某个元素在列表中出现的次数<br>list.extend(seq)        在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）<br>list.index(obj)            从列表中找出某个值第一个匹配项的索引位置<br>list.pop([index=-1])    移除列表中的一个元素（默认最后一个元素），并且返回该元素的值<br>list.remove(obj)        移除列表中某个值的第一个匹配项<br>del    del                 语句删除某个特定位置的元素，从列表中删除切片或清空整个列表<br>list.reverse()            反向列表中元素<br>list.sort               对原列表进行排序</p>
-<p>列表的遍历<br>for-in遍历<br>    for  变量   in   列表：<br>        使用变量<br>while循环遍历<br>    i=0<br>    while i&lt;len(列表)<br>二级列表遍历<br>    for  变量1，变量2   in   列表：<br>        使用变量1和变量2<br>注意：变量1取二级列表中的第一个值，变量2取第二个值</p>
-<p>列表推导式<br>列表推导式提供了一种创建list的简便方法。应用程序创建列表时，列表中的元素来源于其他序列、可迭代对象或创建的一个满足一定条件的序列。<br>格式：　　<br>[表达式 for 变量 in 列表]    或者  [表达式 for 变量 in 列表 if 条件]<br>分类<br>简单的列表推导式<br>带有判断条件的列表推导式<br>多个列表同时循环的列表推导式<br>带有判断调价的多个列表的同时循环列表推导式</p>
+<h2 id="day10-python元组，字典和集合的相关操作"><a href="#day10-python元组，字典和集合的相关操作" class="headerlink" title="day10:python元组，字典和集合的相关操作"></a>day10:python元组，字典和集合的相关操作</h2><p>元组操作</p>
+<pre><code>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改
+元组与列表的区别
+元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组
+</code></pre><p>创建空元组<br>    tuple1=()<br>创建单个元素的元组<br>    tuple1=(‘木木’)，<br>    tuple1=’木木’，<br>创建多个元素的元组<br>    tuple1=(‘1’,’2’,’3’,’4’)</p>
+<p>访问元素<br>    print(tuple1[2])<br>修改元素(No)<br>    del   tuple1[2]   报错<br>删除元素(No)<br>    tuple1[‘2’]=’一朵 小花花’<br>添加元素(No)<br>    添加元素列表都不行，元组也是不可以的<br>元组相加   +<br>元组相乘   *<br>索引操作   [索引]<br>分片          [:]<br>成员检查    in  /   not  in</p>
+<p>元组函数</p>
+<p>len(tuple)    计算元组元素个数<br>max(tuple)    返回元组中元素最大值<br>min(tuple)    返回元组中元素最小值<br>tuple(seq)    将列表转换为元组<br>index(value)    获取指定值在元组中的索引值<br>count(value)    计算某个值在元组中出现的次数</p>
+<p>元组推导式</p>
+<p>基本格式<br>    格式：变量=(i  for  i   in  元组)<br>    结果：不是元组而是一个生成器<br>带有条件的推导式<br>    格式：变量=(i  for  i   in  元组  if  条件表达式)<br>多个循环的推导式（可带有条件）<br>    格式：变量=(x+y  for  x   in  元组1  for  y   in  元组2  [if 条件表达式])<br>    x+y可以是其他操作    </p>
+<p>字典操作</p>
+<p>基本同元组或列表  访问用键</p>
+<p>集合操作<br>不同之处在于集合的性质  可以进行集合运算</p>
+<p>迭代器与生成器的区别<br>    一个占内存，一个不占内存</p>
 
       
 
