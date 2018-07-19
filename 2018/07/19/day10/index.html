@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>github部署hexo博客|孟文俊github-hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day10:python元组，字典和集合的相关操作元组操作 元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别 元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 创建空元组    tuple1=()创建单个元素的元组">
+  <meta name="description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github部署hexo博客|孟文俊github-hexo">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/day10/index.html">
 <meta property="og:site_name" content="github部署hexo博客|孟文俊github-hexo">
-<meta property="og:description" content="day10:python元组，字典和集合的相关操作元组操作 元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别 元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 创建空元组    tuple1=()创建单个元素的元组">
+<meta property="og:description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-19T06:39:08.409Z">
+<meta property="og:updated_time" content="2018-07-19T07:03:24.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github部署hexo博客|孟文俊github-hexo">
-<meta name="twitter:description" content="day10:python元组，字典和集合的相关操作元组操作 元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别 元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 创建空元组    tuple1=()创建单个元素的元组">
+<meta name="twitter:description" content="day10:python元组，字典和集合的相关操作元组 tuple  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器 元组的表示方法:  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组 创建空元组的字面值:   t = ()   空元组 创建非空元组的字面值表示:  t = 200,  t = (20,)  t = (1, 2, 3)  t = 100">
   
     <link rel="alternative" href="/atom.xml" title="github部署hexo博客|孟文俊github-hexo" type="application/atom+xml">
   
@@ -160,19 +160,63 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="day10-python元组，字典和集合的相关操作"><a href="#day10-python元组，字典和集合的相关操作" class="headerlink" title="day10:python元组，字典和集合的相关操作"></a>day10:python元组，字典和集合的相关操作</h2><p>元组操作</p>
-<pre><code>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改
-元组与列表的区别
-元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组
-</code></pre><p>创建空元组<br>    tuple1=()<br>创建单个元素的元组<br>    tuple1=(‘木木’)，<br>    tuple1=’木木’，<br>创建多个元素的元组<br>    tuple1=(‘1’,’2’,’3’,’4’)</p>
-<p>访问元素<br>    print(tuple1[2])<br>修改元素(No)<br>    del   tuple1[2]   报错<br>删除元素(No)<br>    tuple1[‘2’]=’一朵 小花花’<br>添加元素(No)<br>    添加元素列表都不行，元组也是不可以的<br>元组相加   +<br>元组相乘   *<br>索引操作   [索引]<br>分片          [:]<br>成员检查    in  /   not  in</p>
-<p>元组函数</p>
-<p>len(tuple)    计算元组元素个数<br>max(tuple)    返回元组中元素最大值<br>min(tuple)    返回元组中元素最小值<br>tuple(seq)    将列表转换为元组<br>index(value)    获取指定值在元组中的索引值<br>count(value)    计算某个值在元组中出现的次数</p>
-<p>元组推导式</p>
-<p>基本格式<br>    格式：变量=(i  for  i   in  元组)<br>    结果：不是元组而是一个生成器<br>带有条件的推导式<br>    格式：变量=(i  for  i   in  元组  if  条件表达式)<br>多个循环的推导式（可带有条件）<br>    格式：变量=(x+y  for  x   in  元组1  for  y   in  元组2  [if 条件表达式])<br>    x+y可以是其他操作    </p>
-<p>字典操作</p>
-<p>基本同元组或列表  访问用键</p>
-<p>集合操作<br>不同之处在于集合的性质  可以进行集合运算</p>
+<h2 id="day10-python元组，字典和集合的相关操作"><a href="#day10-python元组，字典和集合的相关操作" class="headerlink" title="day10:python元组，字典和集合的相关操作"></a>day10:python元组，字典和集合的相关操作</h2><p>元组 tuple<br>  元组是不可变的序列，同list一样，元组可以存放任意类型数据的容器</p>
+<p>元组的表示方法:<br>  用小括号() 括起来，单个元素括起来后加逗号(,)区分单个对象还是元组</p>
+<p>创建空元组的字面值:<br>   t = ()   空元组</p>
+<p>创建非空元组的字面值表示:<br>  t = 200,<br>  t = (20,)<br>  t = (1, 2, 3)<br>  t = 100, 200, 300</p>
+<p>函数type(x) 用来返回x对应的类型<br>元组的错误示例:<br>  t = (20)  # t 绑定20这个对象，不是元组<br>  x, y, z = 100, 200, 300  # 序列赋值<br>  x, y, z = (100, 200, 300)  # 序列赋值<br>  x, y, z = [100, 200, 300]  # 序列赋值<br>  x, y, z = ‘ABC’            # 序列赋值</p>
+<p>元组的构造(创建)函数tuple<br>  tuple()   生成一个空元组，等同于()<br>  tuple(iterable)  用可迭代对象生成一个元组</p>
+<p>  示例：<br>    t = tuple()   # 等同于 t = ()<br>    t = tuple(range(1, 10, 3))  # t = (1, 4, 7)<br>    t = tuple(“ABC”)  # t = (‘A’, ‘B’, ‘C’)<br>    t = tuple([1, 2, 3])  # t = (1, 2, 3)</p>
+<p>元组的运算:</p>
+<ul>
+<li>+= <em> </em>=<br>&lt; &lt;= &gt; &gt;= == !=<br>in , not in<br>索引[],切片[:]/[::]</li>
+</ul>
+<ul>
+<li>加号用于拼接元组</li>
+</ul>
+<ul>
+<li>用于生成重复的元组</li>
+</ul>
+<p>元组的比较运算:<br>  规则与列表的比较规则完全相同</p>
+<p>in / not in 运算符<br>  规则与列表的规则完全相同</p>
+<p>索引和切片<br>  索引取值和切片取值的规则与列表完全相同<br>  元组不支持索引赋值和切片赋值(因为元组不可被改变)</p>
+<p>元组的方法:<br>  T.index(v[, begin[, end]]) 返回对应元素的索引下标<br>  T.count(x)  返回元组中对应的元素个数<br>  详见:<br>    &gt;&gt;&gt; help(tuple)</p>
+<p>序列相关的函数:<br>  len(x), max(x), min(x), sum(x), any(x), all(x)</p>
+<p>构造函数:<br>  str(x)  创建字符串<br>  list(iterable) 创建列表<br>  tuple(iterable) 创建元组</p>
+<p>序列相关的函数:<br>  reversed(可迭代对象)  返回反向顺序的可迭代对象<br>  sorted(iterable, key=None, reverse=False) 返回已排序的列表</p>
+<p>示例:<br>  t = (4, 8, 6, 2, 7)<br>  L = [x for x in reversed(t)]</p>
+<h1 id="L-7-2-6-8-4-原来先后顺序的反向"><a href="#L-7-2-6-8-4-原来先后顺序的反向" class="headerlink" title="L = [7, 2, 6, 8, 4]  # 原来先后顺序的反向"></a>L = [7, 2, 6, 8, 4]  # 原来先后顺序的反向</h1><p>  for x in reversed(t):<br>      print(x)  #  打印: 7  2  6  8  4</p>
+<p>  L2 = sorted(t)  # L2 = [2, 4, 6, 7, 8]<br>  L3 = sorted(t, reverse=True)  # L3 = [8, 7, 6, 4, 2]</p>
+<p>容器小结:<br>  字符串 str   # 不可变序列，只能存字符<br>  列表 list    # 可变的序列，可以存任意数据<br>  元组 tuple   # 不可变序列，可以存任意数据</p>
+<p>字典 dict</p>
+<p>什么是字典:</p>
+<ol>
+<li>字典是一种可变的容器，可以存储任意类型的数据</li>
+<li>字典中的每个数据都是用’键’(key)进行索引，而不象序列可以用整数下标来进行索引</li>
+<li>字典中的数据没有先后关系，字典的存储是无序的</li>
+<li>字典中的数据以键(key)-值(value)对形式进行映射存储</li>
+<li>字典的键不能重复，且只能用不可变类型作为字典的键</li>
+</ol>
+<p>字典的字面值表示方法:<br>  字典的表示方式是以{} 括起来，以冒号(:) 分隔键-值对,各键-值对之间用逗号(,)分割开 </p>
+<p>创建空字典的字面值:<br>  d = {}    # d 绑定空字典</p>
+<p>创建非空字典的字面值:<br>  d = {‘name’: ‘weimingze’, ‘age’: 35}<br>  d = {1: ‘One’, 2: ‘Two’, 3: ‘Three’}<br>  d = {‘国籍’: ‘中国’}<br>  d = {1: [1, 2, 3], ‘abc’: (1.1, 2.2, 2.3)}<br>  d = {123: list(“123”)}<br>  d = {‘a’: {‘b’: 200, ‘c’: [1, 2, 3]}}<br>  d = {(1970, 1, 1): ‘computer year’}</p>
+<p>字典的构造函数dict<br>  dict()  生成一个字的字典 等同于 {}<br>  dict(iterable)  用可迭代对象初始化一个字典<br>  dict(**kwargs)  用关键字传参形式创建一个字典</p>
+<p>  示例:<br>    d = dict()<br>    d = dict([(‘name’, ‘tarena’), [‘age’, ‘15’]])<br>    d = dict(name=’tarena’, age=15)</p>
+<p>字典的键(key) 必须为不可变类型<br>  bool, int, float, complex, str, tuple, frozenset, bytes(后面再讲)</p>
+<p>字典的值(value) 可以是任意类型</p>
+<p>可变的数据类型有四种:<br>  list 列表<br>  dict 字典<br>  set  集合(后面才讲)<br>  bytearray 字节数组</p>
+<p>字典的基本操作:<br>  字典的键索引<br>    用[] 运算符可以获取字典内’键’对应的值<br>    也可以用[] 运算符来修改’键’对应的值<br>  键索引的语法:<br>    字典[键]</p>
+<p>  示例:<br>    获取值:<br>    d = {‘name’: ‘tarena’, ‘age’: 15}<br>    print(d[‘name’], ‘的年龄是:’, d[‘age’])</p>
+<p>添加/修改字典的元素<br>  语法:<br>    字典[键] = 值<br>  说明:<br>    键不存在时，创建键，并绑定对应的值<br>    当键存在时，修改键绑定的值<br>  示例:<br>    d = {}<br>    d[‘name’] = ‘tarena’  # 创建新的键值对<br>    d[‘age’] = 15<br>    d[‘age’] = 16  # 修改’age’所对应的值</p>
+<p>  删除字典元素<br>    del 字典[键]<br>  示例:<br>    d = {‘name’: ‘tarena’, ‘age’: 15}<br>    del d[‘name’]</p>
+<p>字典的成员资格判断 in 运算符<br>  可以用in运算符判断一个键是否存在于字典中，如果’键’存在则返回True,否则返回False<br>  not in 与 in 结果相反</p>
+<p>  示例:<br>    d = {‘name’: ‘tarena’, ‘age’: 15}<br>    if ‘name’ in d:<br>        print(‘name 在字典中’)</p>
+<pre><code>print(15 in d)  # False,只判断键，不判断值
+</code></pre><p>写程序，实现以下要求:<br>  1) 将如下数据形成一个字典seasons:<br>    ‘键’    ‘值’<br>     1      ‘春季有1, 2, 3月’<br>     2      ‘夏季有4, 5, 6月’<br>     3      ‘秋季有7, 8, 9月’<br>     4      ‘冬季有10,11,12月’<br>  2) 让用户输入一个整数，代表一个季度，打印这个季度对应的信息，如果用户输入的信息不在字典内，则打印信息不存在</p>
+<p>字典的迭代访问<br>  字典是可迭代对象，字典只能对键进行迭代访问</p>
+<p>  示例:<br>    d = {‘name’: ‘tarena’, ‘age’: 15}<br>    for k in d:<br>        print(k, ‘对应的值是: ‘, d[k])</p>
+<p>可以用于字典的内建函数<br>  len(x) 返回字典的键值对个数<br>  max(x) 返回字典的键的最大值<br>  min(x) 返回字典的键的最小值<br>  sum(x) 返回字典中所有键的和<br>  any(x) 真值测试，只要有一个键为True,返回True<br>  all(x)  真值测试，当全部键为真值是，返回True</p>
+<p>  示例:<br>    d = {0: ‘零’, 5: ‘伍’, 8: ‘捌’, 3: ‘参’}<br>    print(len(d))  # 4<br>    print(max(d))  # 8<br>    print(min(d))  # 0<br>    print(sum(d))  # 16<br>    print(any(d))  # True<br>    print(all(d))  # False</p>
 <p>迭代器与生成器的区别<br>    一个占内存，一个不占内存</p>
 
       
