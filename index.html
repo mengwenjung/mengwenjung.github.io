@@ -152,6 +152,153 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-day11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>集合 set<br>  集合的是可变的容器<br>  集合内的数据对象都是唯一的(不能重复多次的)<br>  集合是无序的存储结构，集合中的数据没有先后关系<br>  集合内的元素必须是不可变对象<br>  集合是可迭代对象<br>  集合是相当于只有键没有值的字典(键则是集合的数据)</p>
+<p>创建空集合<br>  s = set()</p>
+<p>创建非空集合<br>  s = {1, 2, 3}<br>  s = {3.14, True, (1970,1,1), “hello”}</p>
+<p>集合的构造函数 set<br>  set()  创建一个空的集合对象(不能用{}创建空集合)<br>  set(iterable)  用可迭代对象创建一个新的集合对象<br>示例:<br>  s = {1, 3, 5, 7}<br>  s = set(“ABC”)<br>  s = set(“ABCCBA”)<br>  s = set({1:’1’, 2:’2’, 5:’5’})<br>  s = set([1, 0, 3.14, “hello”])<br>  s = set((‘abc’, ‘123’, True))</p>
+<p>集合的运算:<br>   交集，并集，补集，子集，超集</p>
+<p>&amp; 生成两个集合的交集<br>  s1 = {1, 2, 3}<br>  s2 = {2, 3, 4}<br>  s3 = s1 &amp; s2  # s3 = {2, 3}</p>
+<p>|  生成两个集合的并集<br>  s1 = {1, 2, 3}<br>  s2 = {2, 3, 4}<br>  s3 = s1 | s2  # s3 = {1, 2, 3, 4}</p>
+<ul>
+<li>生成两个集合的补集<br>s1 = {1, 2, 3}<br>s2 = {2, 3, 4}<br>s3 = s1 - s2  # 生成属于s1但不属于s2的所有元 素的集合</li>
+</ul>
+<p>^ 生成两个集合的对称补集<br>  s1 = {1, 2,i 3}<br>  s2 = {2, 3, 4}<br>  s3 = s1 ^ s2  # (s1 - s2) | (s2 - s1)</p>
+<pre><code># {1, 4}
+</code></pre><blockquote>
+<p>判断一个集合是另一个集合的超集<br>&lt; 判断一个集合是另一个集合的子集<br>  s1 = {1, 2, 3}<br>  s2 = {2, 3}<br>  s1 &gt; s2  # True  s1 为 s2的超集<br>  s1 &lt; s2  # False  s2 为 s1的子集</p>
+</blockquote>
+<p>== != 集合相同/不同<br>  s1 = {1, 2, 3}<br>  s2 = {3, 2, 1}<br>  s1 == s2  # </p>
+<p>in , not in 运算符<br>  等同于字典in,not in,<br>  作于集合中，判断某个值是否存在于集合中</p>
+<p>集合和字典的优点:<br>  in / not in运算符的判断速度快些</p>
+<p>能用于集合的函数:<br>  len(x), max(x), min(x), sum(x), any(x), all(x)</p>
+<p>集合练习:<br>  经理有: 曹操,刘备,孙权<br>  技术员有: 曹操,孙权,张飞,关羽<br>  用集合求:<br>    1) 即是经理，也是技术员的有谁?<br>    2) 是经理，但不是技术员的人员都有谁？<br>    3) 是技术员，不是经理的都有谁<br>    4) 张飞是经理吗？<br>    5) 身兼一职的人都有谁？<br>    6) 经理和技术员共有几个人?</p>
+<p>python3 中常用的集合方法:<br>  文档参见:<br>    python_base_docs_html/set.html</p>
+<p>集合推导式<br>  集合推导式是用可迭代对象生成集合的表达式</p>
+<p>  语法:<br>    {表达式 for 变量 in 可迭代对象 [if 真值表达式]}</p>
+<pre><code>注: [] 括号部分可以省略
+</code></pre><p>  示例:<br>    L = [1, 3, 5, 7, 2, 4, 6, 8, 1, 3, 5]<br>    s = {x for x in L}</p>
+<p>集合推导式可以嵌套:<br>   语法同列表推导式一致!</p>
+<p>练习:<br>  任意输入一些数字，存于列表L中。当输入负数时结束输入<br>  1) 打印这些数的和<br>  2) 打印这些数有多少种(去重)<br>  3) 除重复的数字后，打印这些剩余数字的和</p>
+<p>  提示,可以用集合去重</p>
+<p>固定集合 frozenset<br>  固定集合是不可变的，无序的， 含有唯一元素的集合<br>  作用:<br>    固定集合可以作为字典的键，还可以作为集合的值</p>
+<p>  固定集合的构造函数:<br>    frozenset()  创建一个空的固定集合<br>    frozenset(iterable)  用可迭代对象创建固定集合<br>  示例:<br>    f = frozenset()   # 空固定集合<br>    f = frozenset([1, 3, 5, 7])  # f = frozenset({1, 3, 5, 7})</p>
+<p>固定集合的运算:<br>  &amp; 交集， | 并集,  - 补集, ^ 对称补集<br>  &lt; &lt;= &gt; &gt;= == !=<br>  in / not in<br>  (以上运算符和 集合 set中的用法完全一致)</p>
+<p>固定集合的方法<br>  相当于集合的全部方法去掉修改集合的方法</p>
+<ol>
+<li><p>数据类型:<br>数值类型：<br> int, float, complex, bool<br>容器:<br> 不可变的容器<br>   str, tuple, frozenset, bytes(字节串)<br> 可变的容器<br>   list, dict, set, bytearray(字节数组)<br>2.值:<br> None, False, True</p>
+</li>
+<li><p>运算符<br>算术运算符</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/  //  %  **<br>比较运算符:<br>&lt; &lt;= &gt; &gt;= == !=<br>in / not in<br>is, is not<br>布尔运算:<br>not, and, or<br>+(正号) -(负号)<br>&amp; | ^<br>[] (索引,切片,键索引)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>表达式:<br>  1<br>  1 + 2<br>  max(1,2,3)  # 函数调用是表达式<br>  x if x &gt; y else y, 条件表达式<br>  三种推导式:<br>    列表，字典，集合推导式(三种)</p>
+<p>语句<br>  表达式语句:<br>    所有的表达式都可以单独写在一行，形成一个语句,例:<br>      print(“hello world”)<br>      1 + 2<br>  赋值语句:<br>    a = 100<br>    a = b = c = 100<br>    x, y = 100, 200<br>    a[0] = 100<br>    dict[‘name’] = ‘tarena’<br>  del 语句<br>  if 语句<br>  while 语句<br>  for 语句<br>  break 语句<br>  continue语句<br>  pass 语句</p>
+<p>内建函数:</p>
+<p>  len(x), max(x), min(x), sum(x), any(x), all(x)<br>  构造函数(用来创建同类型的数据对象)<br>    bool(x), int(x), float(x), complex(x),<br>    list(x), tuple(x), str(x), dict(x), set(x),<br>    frozenset(x)<br>  abs(x)<br>  round(x)<br>  pow(x, y, z=None)</p>
+<p>  bin(x), oct(x), hex(x)<br>  chr(x), ord(x)<br>  range(start, stop, step)<br>  input(x), print(x)</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>help(<strong>builtins</strong>)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>函数 function<br>  什么是函数:<br>    函数是可以重复执行的语句块，可以重复调用<br>  作用:</p>
+<pre><code>1. 用 于封装语句块，提高代码的重用性
+2. 定义用户级别的函数
+</code></pre><p>  语法:<br>    def 函数名(形参列表):<br>        语句块<br>  说明:</p>
+<pre><code>1. 函数的名字就是语句块的名称
+2. 函数名的命名规则与变量名相同（函数名必须是标识符）
+3. 函数名是一个变量(不要轻易对其赋值)
+4. 函数有自己的名字空间，在函数外部不可以访问函数内部的变量，在函数内可以访问函数外部的变量,但不能修改此变量.
+5. 函数如果不需要传入参数，形参列表可以为空
+6. 语句部分不能为空，如果为空需要填充pass
+</code></pre><p>  示例见:<br>    function.py</p>
+<p>函数调用<br>  函数名(实际调用传递参数)<br>    注:实际调用传递参数，以后简称实参</p>
+<p>  说明:</p>
+<pre><code>1. 函数调用是一个表达式
+2. 如果函数内部没有return语句，函数调用完毕后返回None对象
+3. 如果函数需要返回其它的对象需要用到 return 语句
+</code></pre><p>练习：</p>
+<ol>
+<li><p>写一个函数myadd, 此函数中的参数列表里有两个参数x, y<br>此函数的功能是打印 x + y 的和</p>
+<p>def myadd(….):<br>   ….  # 注: …. 部是是我们要填写代码的地方</p>
+<p>myadd(100, 200)  # 300<br>print(“ABC”, “123”)  # ABC123</p>
+</li>
+<li><p>写一个函数 mysum, 传入一个参数x代表终止整数，<br>打印出 1 + 2 + 3 + 4 + ….. + x的和<br>def mysum(x):<br>   ….</p>
+<p>mysum(100)  # 5050<br>mysum(4)   # 10</p>
+</li>
+</ol>
+<p>return 语句<br>  语法:<br>    return [表达式]<br>    注: []  代表可省略<br>  作用:<br>    用于函数中，结束当前函数的执行，返回到调用该函数的地方，同时返回一个对象的引用关系</p>
+<p>  return 语句说明</p>
+<pre><code>1. return 语句后跟的表达式可以省略，省略后相 当于return None
+2. 如果函数内没有return 语句，则函数执行完最后一条语句后返回None(相当于在最后加了一条return None语句)
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/20/day11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-day10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -653,55 +800,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/18/day2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-day1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="报道的第一天"><a href="#报道的第一天" class="headerlink" title="报道的第一天"></a>报道的第一天</h2><p>1.python环境搭建<br>2.开发软件code的安装<br>3.人很多，班里很热闹，我很开心</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/18/day1/">展开全文 >></a>
         </p>
       
 
